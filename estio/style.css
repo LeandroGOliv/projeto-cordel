@@ -1,0 +1,86 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+/*font-family: "Sriracha", cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+/*font-family: "Passion One", sans-serif;*/
+:root{
+    --fonte01: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte02: "Passion One" ,sans-serif;
+    --fonte03: "Sriracha", cursive;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    min-height: 100vh; /*o tamanho minimo dele vai ser 100% da tela, nao fica menor que isso*/
+    background-color: darkgrey;
+    font-family: var(--fonte01);
+}
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1{
+    padding-top: 50px;
+    font-variant: small-caps; /*transforma todas letras em maiusculas igual o text-tranforma:uppercase, porem ele continua deixando as primeiras letras maiores(fica menos gritante)*/
+    font-family: var(--fonte02); 
+    /*font-size: 4em; 1 em é o padrao, 4 é 4x o tamanho*/
+    font-size: 7vw; /*o certo seria usando media query mas como não aprendi da pra adaptar assim*/
+}
+header > p{
+    padding-bottom: 50px;
+}
+header a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+section{
+    padding-top: 10vh; /*padding de 10% da altura da tela do dispositivo, serve pra se adaptar*/
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+    font-family: var(--fonte03);
+    font-size: 3vw;
+}
+section > p{
+    padding-bottom: 1.7em;
+}
+section.normal{
+    background-color: white;
+    color: black;
+}
+section.paralax{
+    background-color: rgb(39, 39, 39);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.329); /*(inset pq é uma sombra interna) para dar o efeito que parece dividir a folha e a imagem*/
+    background-size: cover;
+    background-attachment: fixed; /*para fazer o paralax*/
+}
+section.paralax > p{
+    display: inline-block; /*https://dev.to/wps13/tipos-de-display-no-css-471n*/
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.377);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.507);
+}
+section#img01{
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center; /*porque o conteudo imagem que quero que apareca esta a direita*/
+}
+section#img02{
+    background-image: url(../imagens/background002.jpg);
+    background-position: right center;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
